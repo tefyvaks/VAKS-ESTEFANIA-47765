@@ -1,0 +1,31 @@
+{% extends 'BibliotecaApp/base.html' %}
+
+{% block contenidoQueCambia %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="{% url 'Guardar Libro' %}" method="post">{% csrf_token %}
+        <p>Titulo: <input type="text" name="titulo"></p>
+
+        <p>Autor: <input type="text" name="autor"></p>
+
+        <p>Genero: <input type="text" name="genero"></p>
+
+        <p></p><input type="submit" value="Guardar">
+
+    </form>
+
+
+
+
+</body>
+</html>
+
+
+
+{% endblock %}
